@@ -11,19 +11,32 @@
   # README.md
   # run.sh/publish.sh
 
-# BASIC SUDO
+BASE_DIR=$(dirname "$0")
+DATE=`date +%Y-%m-%d`
+EDITOR_BIN="/usr/local/bin/subl"
+POST_FILE="$BASE_DIR/posts/$DATE.md"
+TMP_FILE="$BASE_DIR/tmp/$DATE.md"
 
-# Get system date and format to yyyy-mm-dd.
+source "$BASE_DIR/sh/choice.sh"
+source "$BASE_DIR/sh/setup.sh"
 
-# Check if ./posts/date.md already exists
-  # If true
-    # Prompt: Post already exists, what do you wish to do? - Edit Current - Abort
-      # If edit current
-        # cp ./posts/date.md ./tmp/date.md **is a tmp directory really needed?**
-      # If abort
-        # exit
-  # If false
-    # touch ./tmp/date.md
+setup
+
+if [ -f "$POST_FILE" ]
+then
+  # ('Edit Current', Abort) - pass in these
+  choice EDIT_CURRENT "Post already exists for $DATE. Do you wish to edit the current?"
+  echo $EDIT_CURRENT
+  # TODO: Bash fns only return ints 0-255 so doing this hacky eval stuff. Make choice fn return an int? bool?
+  if [ $EDIT_CURRENT == "Yes" ]
+  then
+    cp "$POST_FILE" "$TMP_FILE"
+  else
+    exit;
+  fi
+else
+  touch "$TMP_FILE"
+fi
 
 # Open favourite editor ./tmp/date.md
 
