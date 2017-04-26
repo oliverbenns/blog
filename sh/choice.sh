@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function choice {
   local ANSWER
   local QUESTION=$2
