@@ -13,11 +13,12 @@
 
 BASE_DIR=$(dirname "$0")
 DATE=`date +%Y-%m-%d`
-EDITOR_BIN="/usr/local/bin/subl"
+EDIT_CMD="subl"
 POST_FILE="$BASE_DIR/posts/$DATE.md"
 TMP_FILE="$BASE_DIR/tmp/$DATE.md"
 
 source "$BASE_DIR/sh/choice.sh"
+source "$BASE_DIR/sh/edit.sh"
 source "$BASE_DIR/sh/setup.sh"
 
 setup
@@ -38,7 +39,7 @@ else
   touch "$TMP_FILE"
 fi
 
-# Open favourite editor ./tmp/date.md
+edit "$BASE_DIR/tmp/$DATE.md"
 
 # Prompt: Have you finished editing?
   # Yes
