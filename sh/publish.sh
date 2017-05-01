@@ -7,6 +7,13 @@ function publish {
     exit 1
   fi
 
+  FILE_SIZE=$(wc -c < "$POST_FILE")
+
+  if [ $FILE_SIZE == 0 ]; then
+    echo "Post exists but has no content, did you mean [ edit ] ?"
+    exit 1
+  fi
+
   echo "Publishing."
 
   # TODO
