@@ -38,7 +38,7 @@ Started a post but forgot to publish? Maybe you published but have noticed some 
 ## Contributing
 This project would love contributions! I have not yet tested this on Linux or Windows Bash - it would be cool if this could be multi-platform.
 
-In terms of adding features, I'm trying to keep this as simple as possible. The items below are off the top of my head. Might be worth having a conversation over them first:
+In terms of adding features, I'm trying to keep this as minimal as possible. The items below are off the top of my head. Might be worth having a conversation over them first:
 
 - Allow for custom date as 2nd parameter.
   - This will allow backtracking
