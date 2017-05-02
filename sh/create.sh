@@ -7,8 +7,6 @@ function create {
     exit 1
   fi
 
-  echo "Creating $POST_FILE"
-
   touch "$POST_FILE"
   editor "$POST_FILE"
 }

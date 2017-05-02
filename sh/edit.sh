@@ -7,7 +7,5 @@ function edit {
     exit 1
   fi
 
-  echo "Editing $POST_FILE"
-
   editor "$POST_FILE"
 }
