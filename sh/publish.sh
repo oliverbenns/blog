@@ -28,7 +28,7 @@ function publish {
       ;;
     "")
       # Handle for if !file is at top of this script already.
-      echo "No changes made to ${DATE} post. Did you mean [ edit ] ?"
+      echo "No changes made to ${DATE} post, did you mean [ edit ] ?"
       git reset "${POST_FILE}"
       exit 1
       ;;
