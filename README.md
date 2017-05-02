@@ -4,6 +4,16 @@
 
 Inspired by the simplicity of John Carmack's [.plan files](https://github.com/oliverbenns/john-carmack-plan). [Sen](https://github.com/oliverbenns/sen) aims to create a minimalist blog for developers all within a Git repo. It prevents the need to worry about updates, style, management and longevity so they can focus purely on what's important: the message.
 
+Each post is a markdown file, by creation date. Markdown was chosen as it offers minimal formatting. More sophisticated than plain text, but not to the point where the author has to worry about semantics. Similar to Carmack's posts, they aren't intended to be long essays - just quick, simple dev logs that are created and published in the same day.
+
+This post structure outputs like this:
+
+- posts
+  - 2016
+    - 2016-01-01.md
+  - 2017
+    - 2017-01-01.md
+
 ## Getting Started
 
 1. First steps require you to have the bash scripts and correct structure. You can do this a few ways:
