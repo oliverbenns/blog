@@ -4,8 +4,8 @@ MODE=$1
 BASE_DIR=$(dirname "$0")
 DATE=`date +%Y-%m-%d`
 YEAR=`date +%Y`
-EDIT_CMD="subl"
 POST_FILE="$BASE_DIR/posts/$YEAR/$DATE.md"
+EDIT_CMD="subl" # <- Change this to your own editor command!
 
 # Tasks
 source "$BASE_DIR/sh/setup.sh"
