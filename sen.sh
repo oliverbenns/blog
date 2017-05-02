@@ -1,11 +1,15 @@
 #!/bin/bash
 
+# Sen 1.0 | Minimalist Git Blog
+# https://github.com/oliverbenns/sen
+
 MODE=$1
 BASE_DIR=$(dirname "$0")
 DATE=`date +%Y-%m-%d`
 YEAR=`date +%Y`
 POST_FILE="$BASE_DIR/posts/$YEAR/$DATE.md"
 EDIT_CMD="subl" # <- Change this to your own editor command!
+VERSION="1.0"
 
 # Tasks
 source "$BASE_DIR/sh/setup.sh"
