@@ -3,7 +3,7 @@
 # Sen 0.1 | Minimalist Git Blog
 # https://github.com/oliverbenns/sen
 
-MODE=$1
+TASK=$1
 BASE_DIR=$(dirname "$0")
 DATE=`date +%Y-%m-%d`
 YEAR=`date +%Y`
@@ -22,7 +22,7 @@ source "$BASE_DIR/sh/lib/editor.sh"
 
 setup
 
-case $MODE in
+case $TASK in
   create)
     create
     ;;
