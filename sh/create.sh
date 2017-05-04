@@ -8,6 +8,11 @@ function create {
   fi
 
   touch "$POST_FILE"
-  echo "# $TITLE" > "$POST_FILE"
+
+  if [ "$TITLE" ]
+  then
+    echo "# $TITLE" > "$POST_FILE"
+  fi
+
   editor "$POST_FILE"
 }
