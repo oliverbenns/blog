@@ -14,7 +14,7 @@ VERSION="0.1"
 
 if [ "$TITLE" ]
 then
-  POST_FILE="$BASE_DIR/posts/$YEAR/$DATE $TITLE.md"
+  POST_FILE="$BASE_DIR/posts/$YEAR/$DATE - $TITLE.md"
 fi
 
 # Tasks
