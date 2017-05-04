@@ -21,10 +21,10 @@ function publish {
 
   case $GIT_STATUS_CODE in
     "A")
-      git commit "$POST_FILE" -m "Publish $POST_FILE_NAME"
+      git commit "$POST_FILE" --quiet -m "Publish $POST_FILE_NAME"
       ;;
     "M")
-      git commit "$POST_FILE" -m "Edit $POST_FILE_NAME"
+      git commit "$POST_FILE" --quiet -m "Edit $POST_FILE_NAME"
       ;;
     "")
       # Handle for if !file is at top of this script already.
