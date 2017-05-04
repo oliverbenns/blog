@@ -2,5 +2,8 @@
 
 function editor {
   local URI=$1
-  eval $EDIT_CMD "$URI"
+
+  URI_ENCODED=$(printf %q "$URI")
+
+  eval $EDIT_CMD "$URI_ENCODED"
 }
