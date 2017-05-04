@@ -8,5 +8,6 @@ function create {
   fi
 
   touch "$POST_FILE"
+  echo "# $TITLE" > "$POST_FILE"
   editor "$POST_FILE"
 }
