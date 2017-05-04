@@ -14,6 +14,13 @@ function publish {
     exit 1
   fi
 
+  if [ "$TITLE" ]
+  then
+    COMMIT_MESSAGE="'$TITLE'"
+  else
+    COMMIT_MESSAGE="$DATE"
+  fi
+
   git add "$POST_FILE"
 
   GIT_STATUS=$(git status --porcelain "$POST_FILE")
@@ -21,10 +28,10 @@ function publish {
 
   case $GIT_STATUS_CODE in
     "A")
-      git commit "$POST_FILE" --quiet -m "Publish $POST_FILE_NAME"
+      git commit "$POST_FILE" --quiet -m "Add $COMMIT_MESSAGE post"
       ;;
     "M")
-      git commit "$POST_FILE" --quiet -m "Edit $POST_FILE_NAME"
+      git commit "$POST_FILE" --quiet -m "Edit $COMMIT_MESSAGE post"
       ;;
     "")
       # Handle for if !file is at top of this script already.
