@@ -29,9 +29,9 @@ Command looks like this: `sh sen.sh [task] [title]`.
 
 ### `[task]`
 
-- **create** - This creates the post file with today's date.
-- **publish** - This will push your new or edited file to your remote branch with a neat message.
-- **edit** - Started a post but forgot to publish? Maybe you published but have noticed some typos? This task allows you to edit the post. Remember to run the publish task again once you've made your updates.
+- **create** - This creates the post file and opens up your favourite editor.
+- **publish** - This will push your new or edited file to your remote branch with a neat commit message.
+- **edit** - Started a post but forgot to publish? Maybe you published but have noticed some typos? This task will open up your post in your editor. Remember to run the publish task again once you've made your updates.
 
 ### `[title]`
 
