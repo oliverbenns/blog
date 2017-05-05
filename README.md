@@ -48,4 +48,4 @@ This project would love contributions! I'm trying to keep this as minimal as pos
   - Only images currently supported are remote images.
   - In `./media` folder? Inside each year folder or in root?
   - Would this require parsing the Markdown for images?
-- Support quotation marks in title.
+- Support quotation marks and special characters in title. `'"<>`
